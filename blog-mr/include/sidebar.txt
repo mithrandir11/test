@@ -1,0 +1,19 @@
+  <ul class="list-group mt-3 mx-2 shadow">
+    <li id="dastebandi-header" class="list-group-item bg-info text-white text-right text-decoration-none" > دسته بندی ها  </li>
+        <?php
+            if($categories->rowCount() > 0){
+                foreach($categories as $category){
+        ?>
+                        <a href="index.php?category=<?php echo $category['id'] ?>" class="list-group-item text-right text-secondary text-decoration-none">
+                            <?php echo $categorie['title'] ?>
+                        </a>
+              <?php          
+                }
+            }
+              ?>
+        <!-- <a class="list-group-item text-right text-secondary text-decoration-none" href="#"> لیست اول </a>
+        <a class="list-group-item text-right text-secondary text-decoration-none" href="#"> لیست دوم </a>
+        <a class="list-group-item text-right text-secondary text-decoration-none" href="#"> لیست سوم </a>
+        <a class="list-group-item text-right text-secondary text-decoration-none" href="#"> لیست چهارم </a> -->
+
+    </ul>
